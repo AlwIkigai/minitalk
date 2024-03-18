@@ -1,10 +1,8 @@
-In this project, I learnt how to improve on my makefile and access my libraries from libft and ft_printf under my subfolder. 
+In this project, I learnt how to improve on my **makefile** and_ access my libraries from libft and ft_printf under my subfolder_. 
 
-As for the libraries, I used signals.h to handle signals and sys/types.h to give a type for the PID.
+As for the libraries, I used **signals.h** to handle signals and **sys/types.h** to give a type for the PID (Process ID) pid_t.
 
-kill is used to send signal and you have to use bitwise operation to move to the bits you want to send
-
-I also learnt about PID, Process ID and how to get them using getpid().
+I learnt about PID, and how to get them using getpid().
 
 The program begins with the server starting first and getting the PID. The PID is initialised with type pid_t.
 The client program will take 2 parameter, av[1] being the PID and av[2] being the string.
@@ -13,8 +11,9 @@ The client will send (PID, string) to the server bit by bit.
 
 In this project, we send the signal bit by bits from client to server.
 
+The function **kill** is used to send signal and you have to use** bitwise operation** to move to the bits you want to send
 I used sendbits function and right shift operation that moves as my counter increased.
-My solotion is to send the least significant bit to most significant bit.
+My solution is to send the least significant bit to most significant bit.
 This is where we use SIGUSR1 to send 1 and SIGUSR2 to send 0.
 As the bit moves to i-th bit is isloated and check if it is to be sent as 1 or 0.
 
