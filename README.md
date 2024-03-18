@@ -35,13 +35,33 @@ In this function, I construct the bits by adding 1 or 0 to the left bit.
 The binary representation of the character is constructed one bit at a time. 
 The static char c variable in the signal_handler function holds the character being constructed from the signals. 
 It’s initialized to 0, which is equivalent to 00000000 in binary.
-The 0 or 
+
+>>The bitwise OR operator (|) is a binary operator that takes two equal-length binary representations,
+>> and performs the logical inclusive OR operation on each pair of the corresponding bits.
+>>
+>>Here’s how it works:
+>>
+>> 0 | 0 is 0
+>> 0 | 1 is 1
+>> not for this project
+>> 1 | 0 is 1
+>> 1 | 1 is 1
+>> as long there is a 1, it will be a 1.
+>> It's like a boolean T ot F. If either is True, it will be True. If using the &, both have to be True for it to be True.
+
 The 8 bits will then be constructed to a character.
 
-struct sigaction sa
-sa.sa_handler
-sa.sa_flags
-sigemptyset
+struct sigaction sa -> struct sigaction are used to describe an action to be taken inn response to specific signal
+
+members are: 
+>>sa.sa_handler -> sa_handler (pointer to a signal handling function). The function receive signal as its only argument.
+>>sa.sa_flags -> sa_flag sets of flaogs to modify behaviour of the signal. Formed by the bitwise OR of zero or more of the following.
+>>  SA_NOCLDSTOP, SA_NOCLDWAIT, SA_NODEFER, SA_ONSTART, SA_RESTART, SA_SIGINFO
+>>sa.sa_mask -> sa_mask specifies a mask of signals which should be blocked
+
+sigemptyset -> function initilizes the signal set poited to by its arguments to empty, with all signals excluded.
+            -> no signals are blocked
+            -> often used to initialize a signal set before adding specific signals to the set
 
 how to use bitwise operation.
   >> shifting the bit to the right. this operation removes the bits from the right.
