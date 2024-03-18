@@ -38,16 +38,17 @@ It’s initialized to 0, which is equivalent to 00000000 in binary.
 The 0 or 
 The 8 bits will then be constructed to a character.
 
+struct sigaction sa
+sa.sa_handler
+sa.sa_flags
+sigemptyset
 
 how to use bitwise operation.
   >> shifting the bit to the right. this operation removes the bits from the right.
       For example, if you left shift 0000 0101 (which represents 5) by 2 positions,
                              you get 0001 0100 (which represents 20).
-
-  << shifting to the bit to the left. this operation adds zero to the right. 
-    For example, if you right shift 0001 0100 (which represents 20) by 2 positions, 
+>  > << shifting to the bit to the left. this operation adds zero to the right. 
+      For example, if you right shift 0001 0100 (which represents 20) by 2 positions, 
                             you get 0000 0101 (which represents 5).
-  | the or operation
-  & the & operator
-
-  However 
+>  > | the or operation
+>  > & the & operator
