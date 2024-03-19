@@ -11,7 +11,7 @@ The client will send (PID, string) to the server bit by bit.
 
 In this project, we send the signal bit by bits from client to server.
 
-The function **kill** is used to send signal and you have to use** bitwise operation** to move to the bits you want to send
+The function **kill** is used to send signal and you have to use **bitwise operation** to move to the bits you want to send
 I used sendbits function and right shift operation that moves as my counter increased.
 My solution is to send the least significant bit to most significant bit.
 This is where we use SIGUSR1 to send 1 and SIGUSR2 to send 0.
